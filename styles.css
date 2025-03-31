@@ -1,16 +1,141 @@
-.container-card {
-    display: flex;
-    justify-content: center;
-    margin: 3rem auto; 
-    max-width: 1200px; 
-  }
-  .card {
-    width: 100%; 
-    max-width: 500px;
-  }
-  .custom-card-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; 
-    object-position: center;
-  }
+.cards-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 15px;
+}
+.space-card {
+  position: relative;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.space-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+.card-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+  padding: 2rem 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.card-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.autotoast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  width: 300px;
+  max-width: 90%;
+  animation: 
+    fadeIn 0.5s ease-out forwards,
+    fadeOut 0.5s ease-out 4.5s forwards;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.autotoast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  width: 350px; 
+  max-width: 90%;
+  animation: 
+    fadeIn 0.5s ease-out forwards,
+    fadeOut 0.5s ease-out 4.5s forwards;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25); 
+  border-radius: 0.5rem; 
+  overflow: hidden; 
+}
+.autotoast .toast-header {
+  font-size: 1.1rem; 
+  padding: 0.75rem 1.25rem; 
+}
+.autotoast .toast-body {
+  font-size: 1rem; 
+  padding: 1.25rem; 
+}
+.autotoast .toast-header img {
+  width: 24px; 
+  height: 24px;
+  object-fit: cover;
+}
+
+.autotoast .btn-close {
+  width: 1em;
+  height: 1em;
+  font-size: 1rem;
+}
+
+.space-accordion {
+  width: 25%;
+  min-width: 250px;
+  margin-left: 20px;
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; 
+}
+.space-accordion .accordion-item {
+  border-bottom: 1px solid #e0e0e0; 
+  background-color: #ffffff; 
+  color: #333333; 
+}
+.space-accordion .accordion-item:last-child {
+  border-bottom: none;
+}
+.space-accordion .accordion-button {
+  background-color: #f8f9fa; 
+  color: #333333; 
+  padding: 12px 15px;
+  font-weight: 500;
+  border: none; 
+}
+
+.space-accordion .accordion-button:not(.collapsed) {
+  background-color: #ffffff; 
+  color: #0d6efd; 
+  box-shadow: inset 0 -1px 0 #e0e0e0; 
+}
+.space-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.space-accordion .accordion-body {
+  background-color: #ffffff; 
+  padding: 15px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #495057; 
+  border-top: 1px solid #f1f1f1;
+}

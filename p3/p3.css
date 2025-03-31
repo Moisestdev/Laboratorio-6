@@ -1,0 +1,55 @@
+.img-canvas {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  object-fit: cover;
+}
+  .card-container {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  .custom-card {
+    display: flex;
+    border: none;
+    background-color: #343a40;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image-container {
+    flex: 0 0 150px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .card-circle-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #495057;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-body {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .card-title {
+    color: #f8f9fa;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    color: #e9ecef;
+    line-height: 1.6;
+  }
+  #accordionFlushExample {
+    max-width: 600px;
+    margin: 20px auto;
+  }
